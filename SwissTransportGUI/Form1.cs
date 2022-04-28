@@ -21,25 +21,37 @@ namespace SwissTransportGUI
         private void Searchbutton_Click(object sender, EventArgs e)
         {
             StartCombobox.Items.Clear();
+            if (StartCombobox.Text == "")
+            {
+                MessageBox.Show("Bitte löschen Sie den Inhalt und geben Sie eine Station ein");
+                StartCombobox.Text = "Hier eingeben";
+            }
 
             //Text(Startstation) aus textbox in Variable speichern
             string StartStation = StartCombobox.Text;
-            //Text mit ähnlichen Daten der Datenbank abgleichen/ holen/ suchen
-            ITransport trans = new Transport();
-            Stations startstations = trans.GetStations(StartStation);
-            foreach (Station station in startstations.StationList)
-            {
-                StartCombobox.Items.Add(station.Name);
-            }
-            StartCombobox.DroppedDown = true;
+            
+            
+           
+                //Text mit ähnlichen Daten der Datenbank abgleichen/ holen/ suchen
+                ITransport trans = new Transport();
+                Stations startstations = trans.GetStations(StartStation);
+                foreach (Station station in startstations.StationList)
+                {
+                    StartCombobox.Items.Add(station.Name);
+                }
+                StartCombobox.DroppedDown = true;
 
-
+            
         }
 
         private void Endsearchbutton_Click(object sender, EventArgs e)
         {
             EndCombobox.Items.Clear();
-
+            if (EndCombobox.Text == "")
+            {
+                MessageBox.Show("Bitte löschen Sie den Inhalt und geben Sie eine Station ein");
+                EndCombobox.Text = "Hier eingeben";
+            }
             //Text(Startstation) aus textbox in Variable speichern
             string EndStation = EndCombobox.Text;
             //Text mit ähnlichen Daten der Datenbank abgleichen/ holen/ suchen
@@ -70,13 +82,27 @@ namespace SwissTransportGUI
                     connection.From.Departure.ToString(),
                     connection.To.Arrival.ToString()
                 });
+                //Fahrzeug wechsel Umstiege in "Umsteigen" (DatatGriedview) einfügen
             }
         }
 
-        //Fahrzeug wechsel Umstiege in "Umsteigen" (DatatGriedview) einfügen
+        private void StationBoardButton_Click(object sender, EventArgs e)
+        {
+            string StartStation = StartCombobox.Text;
+            ITransport Depart = new Transport();
+            StationBoardRoot stationBoards = Depart.GetStationBoard(StartStation, "eijadsfj");
+
+            foreach (StationBoard stations in stationBoards.Entries)
+            {
+                DepartureBoard.Rows.Add(new[] {
+                    stations.To
+                    }); 
+            }
 
 
+        }
 
+       
     }
 
        

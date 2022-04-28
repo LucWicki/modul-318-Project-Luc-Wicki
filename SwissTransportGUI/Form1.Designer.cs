@@ -34,7 +34,7 @@
             this.ConnectionTimes = new System.Windows.Forms.DataGridView();
             this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunftszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.DepartureBoard = new System.Windows.Forms.DataGridView();
             this.Abfahrtstafel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Umsteigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +45,9 @@
             this.EndCombobox = new System.Windows.Forms.ComboBox();
             this.ConnectionButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.StationBoardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,17 +105,17 @@
             this.Ankunftszeit.MinimumWidth = 11;
             this.Ankunftszeit.Name = "Ankunftszeit";
             // 
-            // dataGridView3
+            // DepartureBoard
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DepartureBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DepartureBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Abfahrtstafel});
-            this.dataGridView3.Location = new System.Drawing.Point(739, 173);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 92;
-            this.dataGridView3.RowTemplate.Height = 45;
-            this.dataGridView3.Size = new System.Drawing.Size(397, 309);
-            this.dataGridView3.TabIndex = 9;
+            this.DepartureBoard.Location = new System.Drawing.Point(724, 173);
+            this.DepartureBoard.Name = "DepartureBoard";
+            this.DepartureBoard.RowHeadersWidth = 92;
+            this.DepartureBoard.RowTemplate.Height = 45;
+            this.DepartureBoard.Size = new System.Drawing.Size(492, 207);
+            this.DepartureBoard.TabIndex = 9;
             // 
             // Abfahrtstafel
             // 
@@ -128,7 +129,7 @@
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Umsteigen});
-            this.dataGridView4.Location = new System.Drawing.Point(25, 512);
+            this.dataGridView4.Location = new System.Drawing.Point(1259, 173);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 92;
             this.dataGridView4.RowTemplate.Height = 45;
@@ -205,11 +206,22 @@
             this.label3.Size = new System.Drawing.Size(0, 37);
             this.label3.TabIndex = 18;
             // 
+            // StationBoardButton
+            // 
+            this.StationBoardButton.Location = new System.Drawing.Point(724, 108);
+            this.StationBoardButton.Name = "StationBoardButton";
+            this.StationBoardButton.Size = new System.Drawing.Size(492, 52);
+            this.StationBoardButton.TabIndex = 19;
+            this.StationBoardButton.Text = "Mögliche Endstationen anzeigen";
+            this.StationBoardButton.UseVisualStyleBackColor = true;
+            this.StationBoardButton.Click += new System.EventHandler(this.StationBoardButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1765, 1011);
+            this.ClientSize = new System.Drawing.Size(1765, 573);
+            this.Controls.Add(this.StationBoardButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ConnectionButton);
             this.Controls.Add(this.EndCombobox);
@@ -218,7 +230,7 @@
             this.Controls.Add(this.Startsearchbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.DepartureBoard);
             this.Controls.Add(this.ConnectionTimes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Startstation);
@@ -226,7 +238,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,7 +251,7 @@
         private Label Startstation;
         private Label label2;
         private DataGridView ConnectionTimes;
-        private DataGridView dataGridView3;
+        private DataGridView DepartureBoard;
         private DataGridViewTextBoxColumn Abfahrtstafel;
         private DataGridView dataGridView4;
         private DataGridViewTextBoxColumn Umsteigen;
@@ -252,5 +264,6 @@
         private Label label3;
         private DataGridViewTextBoxColumn Abfahrtszeit;
         private DataGridViewTextBoxColumn Ankunftszeit;
+        private Button StationBoardButton;
     }
 }
