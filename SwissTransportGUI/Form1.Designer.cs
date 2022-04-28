@@ -111,9 +111,12 @@
             this.DepartureBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Abfahrtstafel});
             this.DepartureBoard.Location = new System.Drawing.Point(724, 173);
+            this.DepartureBoard.MultiSelect = false;
             this.DepartureBoard.Name = "DepartureBoard";
+            this.DepartureBoard.ReadOnly = true;
             this.DepartureBoard.RowHeadersWidth = 92;
             this.DepartureBoard.RowTemplate.Height = 45;
+            this.DepartureBoard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DepartureBoard.Size = new System.Drawing.Size(492, 207);
             this.DepartureBoard.TabIndex = 9;
             // 

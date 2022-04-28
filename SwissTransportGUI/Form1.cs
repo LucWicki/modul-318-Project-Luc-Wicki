@@ -67,23 +67,46 @@ namespace SwissTransportGUI
 
         private void ConnectionButton_Click(object sender, EventArgs e)
         {
+            ConnectionTimes.Rows.Clear();
             string StartStation = StartCombobox.Text;
             string EndStation = EndCombobox.Text;
 
             //Verbindungen zwischen Startstation und Endstation suchen
             ITransport connect = new Transport();
-            Connections connections = connect.GetConnections(StartStation, EndStation);
 
-            //Verbindungen (Zeiten) in DatatGriedview "Verbindungen" einfügen
-            foreach (Connection connection in connections.ConnectionList)
+            if (EndStation != "")
             {
-                ConnectionTimes.Rows.Add(new[]
-                   {
+                Connections connections = connect.GetConnections(StartStation, EndStation);
+
+                //Verbindungen (Zeiten) in DatatGriedview "Verbindungen" einfügen
+                foreach (Connection connection in connections.ConnectionList)
+                {
+                    ConnectionTimes.Rows.Add(new[]
+                       {
                     connection.From.Departure.ToString(),
                     connection.To.Arrival.ToString()
                 });
-                //Fahrzeug wechsel Umstiege in "Umsteigen" (DatatGriedview) einfügen
+                }
             }
+            else if (EndStation == "")
+            {
+                //StackOverflow
+                string DepartureRow = DepartureBoard.SelectedRows[0].Cells[0].Value.ToString();
+
+                //Mein Code
+                Connections Departconnections = connect.GetConnections(StartStation, DepartureRow);
+
+                foreach (Connection connection in Departconnections.ConnectionList)
+                {
+                    ConnectionTimes.Rows.Add(new[]
+                       {
+                    connection.From.Departure.ToString(),
+                    connection.To.Arrival.ToString()
+                });
+                }
+            }
+            //Fahrzeug wechsel Umstiege in "Umsteigen" (DatatGriedview) einfügen
+
         }
 
         private void StationBoardButton_Click(object sender, EventArgs e)
