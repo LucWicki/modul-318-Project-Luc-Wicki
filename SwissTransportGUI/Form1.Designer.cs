@@ -88,7 +88,7 @@
             this.ConnectionTimes.Name = "ConnectionTimes";
             this.ConnectionTimes.RowHeadersWidth = 92;
             this.ConnectionTimes.RowTemplate.Height = 45;
-            this.ConnectionTimes.Size = new System.Drawing.Size(615, 207);
+            this.ConnectionTimes.Size = new System.Drawing.Size(755, 207);
             this.ConnectionTimes.TabIndex = 6;
             // 
             // Abfahrtszeit
@@ -110,7 +110,7 @@
             this.DepartureBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DepartureBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Abfahrtstafel});
-            this.DepartureBoard.Location = new System.Drawing.Point(724, 173);
+            this.DepartureBoard.Location = new System.Drawing.Point(873, 173);
             this.DepartureBoard.MultiSelect = false;
             this.DepartureBoard.Name = "DepartureBoard";
             this.DepartureBoard.ReadOnly = true;
@@ -125,6 +125,7 @@
             this.Abfahrtstafel.HeaderText = "Abfahrtstafel";
             this.Abfahrtstafel.MinimumWidth = 11;
             this.Abfahrtstafel.Name = "Abfahrtstafel";
+            this.Abfahrtstafel.ReadOnly = true;
             this.Abfahrtstafel.Width = 225;
             // 
             // dataGridView4
@@ -132,11 +133,11 @@
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Umsteigen});
-            this.dataGridView4.Location = new System.Drawing.Point(1259, 173);
+            this.dataGridView4.Location = new System.Drawing.Point(40, 400);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 92;
             this.dataGridView4.RowTemplate.Height = 45;
-            this.dataGridView4.Size = new System.Drawing.Size(397, 309);
+            this.dataGridView4.Size = new System.Drawing.Size(615, 285);
             this.dataGridView4.TabIndex = 10;
             // 
             // Umsteigen
@@ -211,7 +212,7 @@
             // 
             // StationBoardButton
             // 
-            this.StationBoardButton.Location = new System.Drawing.Point(724, 108);
+            this.StationBoardButton.Location = new System.Drawing.Point(873, 100);
             this.StationBoardButton.Name = "StationBoardButton";
             this.StationBoardButton.Size = new System.Drawing.Size(492, 52);
             this.StationBoardButton.TabIndex = 19;
@@ -223,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1765, 573);
+            this.ClientSize = new System.Drawing.Size(1765, 783);
             this.Controls.Add(this.StationBoardButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ConnectionButton);
