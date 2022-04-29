@@ -36,7 +36,7 @@
             this.Ankunftszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DepartureBoard = new System.Windows.Forms.DataGridView();
             this.Abfahrtstafel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.ChangeBoard = new System.Windows.Forms.DataGridView();
             this.Umsteigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.Startsearchbutton = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.FutureTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChangeBoard)).BeginInit();
             this.SuspendLayout();
             // 
             // FutureDate
@@ -59,7 +59,7 @@
             this.FutureDate.Location = new System.Drawing.Point(1396, 89);
             this.FutureDate.Name = "FutureDate";
             this.FutureDate.Size = new System.Drawing.Size(224, 43);
-            this.FutureDate.TabIndex = 0;
+            this.FutureDate.TabIndex = 4;
             // 
             // Startstation
             // 
@@ -67,7 +67,7 @@
             this.Startstation.Location = new System.Drawing.Point(25, 30);
             this.Startstation.Name = "Startstation";
             this.Startstation.Size = new System.Drawing.Size(152, 37);
-            this.Startstation.TabIndex = 1;
+            this.Startstation.TabIndex = 11;
             this.Startstation.Text = "Startstation";
             // 
             // label2
@@ -76,7 +76,7 @@
             this.label2.Location = new System.Drawing.Point(724, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 37);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Endstation";
             // 
             // ConnectionTimes
@@ -119,7 +119,7 @@
             this.DepartureBoard.RowTemplate.Height = 45;
             this.DepartureBoard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DepartureBoard.Size = new System.Drawing.Size(492, 207);
-            this.DepartureBoard.TabIndex = 9;
+            this.DepartureBoard.TabIndex = 8;
             // 
             // Abfahrtstafel
             // 
@@ -129,17 +129,17 @@
             this.Abfahrtstafel.ReadOnly = true;
             this.Abfahrtstafel.Width = 225;
             // 
-            // dataGridView4
+            // ChangeBoard
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ChangeBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ChangeBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Umsteigen});
-            this.dataGridView4.Location = new System.Drawing.Point(40, 400);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 92;
-            this.dataGridView4.RowTemplate.Height = 45;
-            this.dataGridView4.Size = new System.Drawing.Size(615, 285);
-            this.dataGridView4.TabIndex = 10;
+            this.ChangeBoard.Location = new System.Drawing.Point(40, 400);
+            this.ChangeBoard.Name = "ChangeBoard";
+            this.ChangeBoard.RowHeadersWidth = 92;
+            this.ChangeBoard.RowTemplate.Height = 45;
+            this.ChangeBoard.Size = new System.Drawing.Size(615, 285);
+            this.ChangeBoard.TabIndex = 10;
             // 
             // Umsteigen
             // 
@@ -154,7 +154,7 @@
             this.label1.Location = new System.Drawing.Point(1414, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 37);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 13;
             this.label1.Text = "Datum und Uhrzeit";
             // 
             // Startsearchbutton
@@ -162,7 +162,7 @@
             this.Startsearchbutton.Location = new System.Drawing.Point(536, 25);
             this.Startsearchbutton.Name = "Startsearchbutton";
             this.Startsearchbutton.Size = new System.Drawing.Size(169, 52);
-            this.Startsearchbutton.TabIndex = 12;
+            this.Startsearchbutton.TabIndex = 1;
             this.Startsearchbutton.Text = "Search";
             this.Startsearchbutton.UseVisualStyleBackColor = true;
             this.Startsearchbutton.Click += new System.EventHandler(this.Searchbutton_Click);
@@ -172,7 +172,7 @@
             this.Endsearchbutton.Location = new System.Drawing.Point(1213, 25);
             this.Endsearchbutton.Name = "Endsearchbutton";
             this.Endsearchbutton.Size = new System.Drawing.Size(169, 52);
-            this.Endsearchbutton.TabIndex = 14;
+            this.Endsearchbutton.TabIndex = 3;
             this.Endsearchbutton.Text = "Search";
             this.Endsearchbutton.UseVisualStyleBackColor = true;
             this.Endsearchbutton.Click += new System.EventHandler(this.Endsearchbutton_Click);
@@ -183,7 +183,7 @@
             this.StartCombobox.Location = new System.Drawing.Point(205, 25);
             this.StartCombobox.Name = "StartCombobox";
             this.StartCombobox.Size = new System.Drawing.Size(272, 45);
-            this.StartCombobox.TabIndex = 15;
+            this.StartCombobox.TabIndex = 0;
             // 
             // EndCombobox
             // 
@@ -191,14 +191,14 @@
             this.EndCombobox.Location = new System.Drawing.Point(873, 27);
             this.EndCombobox.Name = "EndCombobox";
             this.EndCombobox.Size = new System.Drawing.Size(272, 45);
-            this.EndCombobox.TabIndex = 16;
+            this.EndCombobox.TabIndex = 2;
             // 
             // ConnectionButton
             // 
             this.ConnectionButton.Location = new System.Drawing.Point(40, 100);
             this.ConnectionButton.Name = "ConnectionButton";
             this.ConnectionButton.Size = new System.Drawing.Size(368, 52);
-            this.ConnectionButton.TabIndex = 17;
+            this.ConnectionButton.TabIndex = 6;
             this.ConnectionButton.Text = "Verbindungen anzeigen";
             this.ConnectionButton.UseVisualStyleBackColor = true;
             this.ConnectionButton.Click += new System.EventHandler(this.ConnectionButton_Click);
@@ -216,7 +216,7 @@
             this.StationBoardButton.Location = new System.Drawing.Point(873, 100);
             this.StationBoardButton.Name = "StationBoardButton";
             this.StationBoardButton.Size = new System.Drawing.Size(492, 52);
-            this.StationBoardButton.TabIndex = 19;
+            this.StationBoardButton.TabIndex = 7;
             this.StationBoardButton.Text = "Mögliche Endstationen anzeigen";
             this.StationBoardButton.UseVisualStyleBackColor = true;
             this.StationBoardButton.Click += new System.EventHandler(this.StationBoardButton_Click);
@@ -228,7 +228,7 @@
             this.FutureTime.Location = new System.Drawing.Point(1626, 89);
             this.FutureTime.Name = "FutureTime";
             this.FutureTime.Size = new System.Drawing.Size(127, 43);
-            this.FutureTime.TabIndex = 20;
+            this.FutureTime.TabIndex = 5;
             this.FutureTime.Value = new System.DateTime(2022, 4, 29, 10, 15, 0, 0);
             // 
             // Form1
@@ -245,7 +245,7 @@
             this.Controls.Add(this.Endsearchbutton);
             this.Controls.Add(this.Startsearchbutton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.ChangeBoard);
             this.Controls.Add(this.DepartureBoard);
             this.Controls.Add(this.ConnectionTimes);
             this.Controls.Add(this.label2);
@@ -255,7 +255,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChangeBoard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,7 +269,7 @@
         private DataGridView ConnectionTimes;
         private DataGridView DepartureBoard;
         private DataGridViewTextBoxColumn Abfahrtstafel;
-        private DataGridView dataGridView4;
+        private DataGridView ChangeBoard;
         private DataGridViewTextBoxColumn Umsteigen;
         private Label label1;
         private Button Startsearchbutton;

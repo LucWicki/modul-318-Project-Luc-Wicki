@@ -18,6 +18,8 @@ namespace SwissTransportGUI
         {
             InitializeComponent();
         }
+        
+
         private void Searchbutton_Click(object sender, EventArgs e)
         {
             StartCombobox.Items.Clear();
@@ -122,5 +124,5 @@ namespace SwissTransportGUI
                     }); 
             }
         }
-    }
+}
 }

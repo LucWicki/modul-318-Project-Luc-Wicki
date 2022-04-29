@@ -31,8 +31,9 @@
             stationBoard.Should().NotBeNull();
         }
 
+        // Connections von mir verändert
         [Fact]
-        public void Connections()
+        public void FutureConnections()
         {
             DateTime time = DateTime.Now;
             DateTime date = DateTime.Now;
