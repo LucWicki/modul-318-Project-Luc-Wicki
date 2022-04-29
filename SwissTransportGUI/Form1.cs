@@ -72,7 +72,6 @@ namespace SwissTransportGUI
             string EndStation = EndCombobox.Text;
             DateTime Time = FutureTime.Value;
             DateTime Date = FutureDate.Value;
-            
 
             //Verbindungen zwischen Startstation und Endstation suchen
             ITransport connect = new Transport();
@@ -110,10 +109,6 @@ namespace SwissTransportGUI
                 });
                 }
             }
-            //Fahrzeug/Gleis wechsel in "Umsteigen" (DatatGriedview) einfügen
-            
-            //Connections changes = connect.GetChanges(StartStation, EndStation);
-
         }
 
         private void StationBoardButton_Click(object sender, EventArgs e)
