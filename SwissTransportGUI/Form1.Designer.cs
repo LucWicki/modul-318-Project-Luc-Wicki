@@ -237,7 +237,7 @@
             this.Controls.Add(this.Startstation);
             this.Controls.Add(this.FutureDate);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "S";
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).EndInit();
             this.ResumeLayout(false);
