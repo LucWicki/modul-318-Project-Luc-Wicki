@@ -118,6 +118,13 @@ namespace SwissTransportGUI
 
         private void StationBoardButton_Click(object sender, EventArgs e)
         {
+            if (StartCombobox.Text == "")
+            {
+                MessageBox.Show("Bitte löschen Sie den Inhalt und geben Sie eine Station ein");
+                StartCombobox.Text = "Hier eingeben";
+            }
+            EndCombobox.Items.Clear();
+            EndCombobox.Text = "";
             string StartStation = StartCombobox.Text;
             ITransport Depart = new Transport();
             StationBoardRoot stationBoards = Depart.GetStationBoard(StartStation, "eijadsfj");

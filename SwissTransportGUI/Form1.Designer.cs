@@ -46,12 +46,8 @@
             this.StationBoardButton = new System.Windows.Forms.Button();
             this.FutureTime = new System.Windows.Forms.DateTimePicker();
             this.Umsteigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChangeBoard = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChangeBoard)).BeginInit();
             this.SuspendLayout();
             // 
             // FutureDate
@@ -221,39 +217,11 @@
             this.Umsteigen.MinimumWidth = 11;
             this.Umsteigen.Name = "Umsteigen";
             // 
-            // ChangeBoard
-            // 
-            this.ChangeBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChangeBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.ChangeBoard.Location = new System.Drawing.Point(40, 421);
-            this.ChangeBoard.Name = "ChangeBoard";
-            this.ChangeBoard.RowHeadersWidth = 92;
-            this.ChangeBoard.RowTemplate.Height = 45;
-            this.ChangeBoard.Size = new System.Drawing.Size(1021, 207);
-            this.ChangeBoard.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Umsteigen in";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Gleis/Kante";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2098, 706);
-            this.Controls.Add(this.ChangeBoard);
+            this.ClientSize = new System.Drawing.Size(2098, 569);
             this.Controls.Add(this.FutureTime);
             this.Controls.Add(this.StationBoardButton);
             this.Controls.Add(this.label3);
@@ -272,7 +240,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChangeBoard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,8 +265,5 @@
         private DateTimePicker FutureTime;
         private DataGridViewTextBoxColumn Abfahrtstafel;
         private DataGridViewTextBoxColumn Umsteigen;
-        private DataGridView ChangeBoard;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
