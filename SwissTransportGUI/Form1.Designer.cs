@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FutureDate = new System.Windows.Forms.DateTimePicker();
             this.Startstation = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ConnectionTimes = new System.Windows.Forms.DataGridView();
@@ -46,19 +46,20 @@
             this.ConnectionButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.StationBoardButton = new System.Windows.Forms.Button();
+            this.FutureTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartureBoard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // FutureDate
             // 
-            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy | hh:mm";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1400, 89);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(297, 43);
-            this.dateTimePicker1.TabIndex = 0;
+            this.FutureDate.CustomFormat = "dd.MM.yyyy ";
+            this.FutureDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FutureDate.Location = new System.Drawing.Point(1396, 89);
+            this.FutureDate.Name = "FutureDate";
+            this.FutureDate.Size = new System.Drawing.Size(224, 43);
+            this.FutureDate.TabIndex = 0;
             // 
             // Startstation
             // 
@@ -220,11 +221,22 @@
             this.StationBoardButton.UseVisualStyleBackColor = true;
             this.StationBoardButton.Click += new System.EventHandler(this.StationBoardButton_Click);
             // 
+            // FutureTime
+            // 
+            this.FutureTime.CustomFormat = "hh:mm";
+            this.FutureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FutureTime.Location = new System.Drawing.Point(1626, 89);
+            this.FutureTime.Name = "FutureTime";
+            this.FutureTime.Size = new System.Drawing.Size(127, 43);
+            this.FutureTime.TabIndex = 20;
+            this.FutureTime.Value = new System.DateTime(2022, 4, 29, 10, 15, 0, 0);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1765, 783);
+            this.Controls.Add(this.FutureTime);
             this.Controls.Add(this.StationBoardButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ConnectionButton);
@@ -238,7 +250,7 @@
             this.Controls.Add(this.ConnectionTimes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Startstation);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FutureDate);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimes)).EndInit();
@@ -251,7 +263,7 @@
 
         #endregion
 
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker FutureDate;
         private Label Startstation;
         private Label label2;
         private DataGridView ConnectionTimes;
@@ -269,5 +281,6 @@
         private DataGridViewTextBoxColumn Abfahrtszeit;
         private DataGridViewTextBoxColumn Ankunftszeit;
         private Button StationBoardButton;
+        private DateTimePicker FutureTime;
     }
 }

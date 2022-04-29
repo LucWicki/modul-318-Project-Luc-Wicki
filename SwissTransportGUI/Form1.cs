@@ -66,6 +66,8 @@ namespace SwissTransportGUI
             ConnectionTimes.Rows.Clear();
             string StartStation = StartCombobox.Text;
             string EndStation = EndCombobox.Text;
+            DateTime Time = FutureTime.Value;
+            DateTime Date = FutureDate.Value;
 
             //Verbindungen zwischen Startstation und Endstation suchen
             ITransport connect = new Transport();
@@ -73,7 +75,7 @@ namespace SwissTransportGUI
             //Endstation wird von der Eingabe genommen
             if (EndStation != "")
             {
-                Connections connections = connect.GetConnections(StartStation, EndStation);
+                Connections connections = connect.GetConnections(StartStation, EndStation, Date, Time);
 
                 //Verbindungen (Zeiten) in DatatGriedview "Verbindungen" einfügen
                 foreach (Connection connection in connections.ConnectionList)
@@ -92,7 +94,7 @@ namespace SwissTransportGUI
                 string DepartureRow = DepartureBoard.SelectedRows[0].Cells[0].Value.ToString();
 
                 //Wieder mein code
-                Connections Departconnections = connect.GetConnections(StartStation, DepartureRow);
+                Connections Departconnections = connect.GetConnections(StartStation, DepartureRow, Date, Time);
 
                 foreach (Connection connection in Departconnections.ConnectionList)
                 {
