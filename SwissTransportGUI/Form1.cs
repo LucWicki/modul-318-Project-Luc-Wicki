@@ -19,7 +19,7 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
         
-
+        // Startstation suchen 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
             StartCombobox.Items.Clear();
@@ -31,6 +31,7 @@ namespace SwissTransportGUI
 
             //Text(Startstation) aus textbox in Variable speichern
             string StartStation = StartCombobox.Text;
+
            
             //Text mit ähnlichen Daten der Datenbank abgleichen/ holen/ suchen
             ITransport start = new Transport();
@@ -42,6 +43,7 @@ namespace SwissTransportGUI
             StartCombobox.DroppedDown = true;
         }
 
+        //Endstation suchen
         private void Endsearchbutton_Click(object sender, EventArgs e)
         {
             EndCombobox.Items.Clear();
@@ -70,6 +72,7 @@ namespace SwissTransportGUI
             string EndStation = EndCombobox.Text;
             DateTime Time = FutureTime.Value;
             DateTime Date = FutureDate.Value;
+            
 
             //Verbindungen zwischen Startstation und Endstation suchen
             ITransport connect = new Transport();
@@ -107,7 +110,10 @@ namespace SwissTransportGUI
                 });
                 }
             }
-            //Fahrzeug wechsel Umstiege in "Umsteigen" (DatatGriedview) einfügen
+            //Fahrzeug/Gleis wechsel in "Umsteigen" (DatatGriedview) einfügen
+            
+            //Connections changes = connect.GetChanges(StartStation, EndStation);
+
         }
 
         private void StationBoardButton_Click(object sender, EventArgs e)

@@ -39,6 +39,7 @@
             return this.GetObject<StationBoardRoot>(uri);
         }
 
+        // Von mir veränderter code
         public Connections GetConnections(string fromStation, string toStation, DateTime date, DateTime time)
         {
             if (string.IsNullOrEmpty(fromStation))
@@ -52,6 +53,13 @@
             }
 
             var uri = new Uri($"{WebApiHost}connections?from={fromStation}&to={toStation}&date={date}&time={time}");
+            return this.GetObject<Connections>(uri);
+        }
+
+        // Mein Code
+        public Connections GetChanges(string changes, string fromStation, string toStation)
+        {
+            var uri = new Uri($"{WebApiHost}connections?from={fromStation}&to={toStation}&journey={changes}");
             return this.GetObject<Connections>(uri);
         }
 

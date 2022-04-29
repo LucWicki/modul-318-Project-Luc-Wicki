@@ -11,5 +11,7 @@
         StationBoardRoot GetStationBoard(string station, string id);
 
         Connections GetConnections(string fromStation, string toStatiosn, DateTime date, DateTime time);
+
+        Connections GetChanges(string fromStation, string toStation, string changes);
     }
 }
